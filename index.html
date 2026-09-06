@@ -23,7 +23,7 @@
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.plan{overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff}.plan img{width:100%;height:115px;object-fit:cover;background:#d9dde4}.plan-body{padding:12px}.tag{display:inline-block;padding:5px 8px;border-radius:99px;background:#fde9ec;color:var(--red);font-size:10px;font-weight:900}.plan h4{margin:8px 0 4px;font-size:16px}.plan p{font-size:12px;color:var(--muted);margin:0 0 10px;line-height:1.45}.price{font-size:22px;color:var(--red);font-weight:900;margin-bottom:8px}.price span{font-size:12px;color:var(--muted)}
 .layout-bottom{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:680px}th,td{padding:11px 9px;border-bottom:1px solid var(--line);text-align:left;font-size:12px}th{color:var(--muted);font-size:11px;text-transform:uppercase}.pill{padding:5px 8px;border-radius:999px;font-size:10px;font-weight:900;display:inline-block}.pill.green{background:#e6f7ef;color:#0b8352}.pill.amber{background:#fff1d9;color:#9c6500}.pill.gray{background:#edf0f3;color:#616a75}
 .mapbox{min-height:270px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.map-art{border-radius:14px;background:radial-gradient(circle at 50% 44%,#f9dde1 0 28%,#fff 29%),repeating-linear-gradient(45deg,#eef1f4 0 5px,#f8f9fb 5px 10px);position:relative;overflow:hidden}.map-art:before{content:"";position:absolute;inset:24px;border:2px dashed #d9dee4;border-radius:45% 50% 47% 53%}.pin{position:absolute;width:12px;height:12px;background:var(--red);border:3px solid #fff;box-shadow:0 4px 10px rgba(165,0,24,.25);border-radius:50%}.p1{left:51%;top:40%}.p2{left:44%;top:49%}.p3{left:57%;top:52%}.p4{left:50%;top:60%}.p5{left:63%;top:45%}.map-list strong{display:block;margin-bottom:8px}.city{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:12px}
-.team-list{display:grid;gap:8px}.person{display:grid;grid-template-columns:36px 1fr auto auto;gap:9px;align-items:center;padding:7px;border:1px solid var(--line);border-radius:12px}.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#d8dde3,#aab3bd);display:grid;place-items:center;font-weight:900;color:#4b535e}.status{font-size:11px;font-weight:900}.muted{color:var(--muted);font-size:12px}.search{border:1px solid var(--line);background:#fff;padding:10px 12px;border-radius:10px;outline:none}
+.team-list{display:grid;gap:8px}.person{display:grid;grid-template-columns:42px 1fr auto auto;gap:9px;align-items:center;padding:7px;border:1px solid var(--line);border-radius:12px}.avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#d8dde3,#aab3bd);display:grid;place-items:center;font-weight:900;color:#4b535e;overflow:hidden;border:2px solid #fff;box-shadow:0 2px 8px rgba(22,31,44,.12)}.avatar img{width:100%;height:100%;object-fit:cover;display:block}.status{font-size:11px;font-weight:900}.muted{color:var(--muted);font-size:12px}.search{border:1px solid var(--line);background:#fff;padding:10px 12px;border-radius:10px;outline:none}
 .route{display:grid;grid-template-columns:1fr 1fr;gap:14px}.route-map{background:linear-gradient(135deg,#fbe9ec,#fff);border-radius:14px;display:grid;place-items:center;min-height:160px;color:var(--red);font-weight:900;text-align:center}
 .modal-backdrop{position:fixed;inset:0;background:rgba(8,12,18,.48);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}.modal{width:min(680px,100%);background:#fff;border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.25);overflow:hidden}.modal-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.modal-body{padding:18px;display:grid;gap:12px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:900;color:#4c5662}.field input,.field select{border:1px solid #d6dbe1;border-radius:10px;padding:10px;outline:none}.modal-foot{padding:14px 18px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:8px}.toast{position:fixed;right:22px;bottom:22px;background:#15202b;color:#fff;padding:12px 15px;border-radius:10px;display:none;z-index:120}
 .footer{padding:14px 22px;color:var(--muted);font-size:11px;text-align:center}
@@ -100,7 +100,7 @@
 </main></div>
 
 <div class="modal-backdrop" id="modal"><div class="modal"><div class="modal-head"><b id="modalTitle">Novo vendedor</b><button class="btn small" onclick="closeModal()">Fechar</button></div><form class="modal-body" onsubmit="saveModal(event)"><input type="hidden" id="editIndex"><div class="form-grid">
-<div class="field"><label>Nome</label><input id="sellerName" required></div><div class="field"><label>Função</label><select id="sellerRole"><option>Vendedor</option><option>Supervisora</option><option>Coordenador</option></select></div><div class="field"><label>Status</label><select id="sellerStatus"><option>Online</option><option>Offline</option></select></div><div class="field"><label>Equipe / Van</label><input id="sellerVan" placeholder="Equipe 2 / Van 03"></div>
+<div class="field"><label>Nome</label><input id="sellerName" required></div><div class="field"><label>Função</label><select id="sellerRole"><option>Vendedor</option><option>Supervisora</option><option>Coordenador</option></select></div><div class="field"><label>Status</label><select id="sellerStatus"><option>Online</option><option>Offline</option></select></div><div class="field"><label>Equipe / Van</label><input id="sellerVan" placeholder="Equipe 2 / Van 03"></div><div class="field full"><label>Foto do vendedor</label><input id="sellerPhoto" type="file" accept="image/*" onchange="previewSellerPhoto(event)"><div id="sellerPhotoPreview" style="display:flex;align-items:center;gap:10px;margin-top:2px"><div class="avatar" id="previewAvatar">?</div><span class="muted">JPG ou PNG • até 2,5 MB.</span></div></div>
 </div><div class="modal-foot"><button type="button" class="btn" onclick="closeModal()">Cancelar</button><button class="btn primary">Salvar</button></div></form></div></div>
 
 <div class="modal-backdrop" id="clientModal"><div class="modal"><div class="modal-head"><b>Novo cliente / pós-venda</b><button class="btn small" onclick="document.getElementById('clientModal').style.display='none'">Fechar</button></div><form class="modal-body" onsubmit="saveClient(event)"><div class="form-grid">
@@ -111,16 +111,45 @@
 
 <script>
 let sellers=JSON.parse(localStorage.getItem('ct_sellers')||'null')||[
-['Adriano','Vendedor','Online','Equipe 2 / Van 03'],['Gustavo','Vendedor','Online','Equipe 2 / Van 03'],['Ronaldo','Vendedor','Offline','Equipe 1 / Van 01'],['Tatiane','Vendedora','Online','Equipe 3 / Van 04'],['Andrei','Vendedor','Online','Equipe 3 / Van 04'],['Diego','Vendedor','Online','Equipe 1 / Van 01'],['Rogério','Vendedor','Offline','Equipe 2 / Van 03']];
+{name:'Adriano',role:'Vendedor',status:'Online',van:'Equipe 2 / Van 03',photo:''},
+{name:'Gustavo',role:'Vendedor',status:'Online',van:'Equipe 2 / Van 03',photo:''},
+{name:'Ronaldo',role:'Vendedor',status:'Offline',van:'Equipe 1 / Van 01',photo:''},
+{name:'Tatiane',role:'Vendedora',status:'Online',van:'Equipe 3 / Van 04',photo:''},
+{name:'Andrei',role:'Vendedor',status:'Online',van:'Equipe 3 / Van 04',photo:''},
+{name:'Diego',role:'Vendedor',status:'Online',van:'Equipe 1 / Van 01',photo:''},
+{name:'Rogério',role:'Vendedor',status:'Offline',van:'Equipe 2 / Van 03',photo:''}];
+let pendingPhoto='';
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2300)}
 function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open')}
 function initials(n){return n.split(' ').map(x=>x[0]).slice(0,2).join('').toUpperCase()}
-function openSeller(i=-1){document.getElementById('modal').style.display='flex';document.getElementById('modalTitle').textContent=i<0?'Novo vendedor':'Editar vendedor';document.getElementById('editIndex').value=i;if(i>=0){let s=sellers[i];sellerName.value=s[0];sellerRole.value=s[1];sellerStatus.value=s[2];sellerVan.value=s[3]||''}else{sellerName.value='';sellerVan.value='';sellerStatus.value='Online'}}
-function closeModal(){document.getElementById('modal').style.display='none'}
-function saveModal(e){e.preventDefault();let i=+editIndex.value;let s=[sellerName.value.trim(),sellerRole.value,sellerStatus.value,sellerVan.value.trim()];if(i<0)sellers.push(s);else sellers[i]=s;localStorage.setItem('ct_sellers',JSON.stringify(sellers));renderTeam();closeModal();toast(i<0?'Vendedor adicionado':'Vendedor atualizado')}
+function showAvatarMarkup(s){return s.photo?'<img src="'+s.photo+'" alt="Foto de '+s.name+'">':initials(s.name)}
+function previewSellerPhoto(e){
+ const file=e.target.files&&e.target.files[0]; if(!file)return;
+ if(file.size>2.5*1024*1024){alert('Escolha uma imagem de até 2,5 MB.');e.target.value='';return}
+ const reader=new FileReader(); reader.onload=()=>{pendingPhoto=reader.result;previewAvatar.innerHTML='<img src="'+pendingPhoto+'" alt="Prévia da foto">'}; reader.readAsDataURL(file)
+}
+function openSeller(i=-1){
+ modal.style.display='flex';modalTitle.textContent=i<0?'Novo vendedor':'Editar vendedor';editIndex.value=i;pendingPhoto='';sellerPhoto.value='';
+ if(i>=0){let s=sellers[i];sellerName.value=s.name;sellerRole.value=s.role;sellerStatus.value=s.status;sellerVan.value=s.van||'';previewAvatar.innerHTML=showAvatarMarkup(s)}
+ else{sellerName.value='';sellerVan.value='';sellerStatus.value='Online';previewAvatar.textContent='?'}
+}
+function closeModal(){modal.style.display='none'}
+function saveModal(e){
+ e.preventDefault();let i=+editIndex.value;let old=i>=0?sellers[i]:{};
+ let s={name:sellerName.value.trim(),role:sellerRole.value,status:sellerStatus.value,van:sellerVan.value.trim(),photo:pendingPhoto||old.photo||''};
+ if(i<0)sellers.push(s);else sellers[i]=s;
+ localStorage.setItem('ct_sellers',JSON.stringify(sellers));renderTeam();closeModal();toast(i<0?'Vendedor adicionado':'Vendedor atualizado')
+}
 function deleteSeller(i){if(confirm('Excluir este vendedor?')){sellers.splice(i,1);localStorage.setItem('ct_sellers',JSON.stringify(sellers));renderTeam();toast('Vendedor excluído')}}
-function selectSeller(i){currentSeller.textContent=sellers[i][0];helloName.textContent=sellers[i][0];toast('Painel de '+sellers[i][0]+' selecionado')}
-function renderTeam(){teamList.innerHTML='';sellers.forEach((s,i)=>{let d=document.createElement('div');d.className='person';d.innerHTML='<div class="avatar">'+initials(s[0])+'</div><div onclick="selectSeller('+i+')" style="cursor:pointer"><b>'+s[0]+'</b><div class="muted">'+(s[3]||'Sem equipe definida')+'</div></div><span class="status" style="color:'+(s[2]=='Online'?'var(--green)':'#8b949e')+'">● '+s[2]+'</span><div class="inline-tools"><button class="btn small" onclick="openSeller('+i+')">✎</button><button class="btn small" onclick="deleteSeller('+i+')">🗑</button></div>';teamList.appendChild(d)})}
+function selectSeller(i){currentSeller.textContent=sellers[i].name;helloName.textContent=sellers[i].name;toast('Painel de '+sellers[i].name+' selecionado')}
+function renderTeam(){
+ teamList.innerHTML='';
+ sellers.forEach((s,i)=>{
+   let d=document.createElement('div');d.className='person';
+   d.innerHTML='<div class="avatar">'+showAvatarMarkup(s)+'</div><div onclick="selectSeller('+i+')" style="cursor:pointer"><b>'+s.name+'</b><div class="muted">'+(s.van||'Sem equipe definida')+'</div></div><span class="status" style="color:'+(s.status=='Online'?'var(--green)':'#8b949e')+'">● '+s.status+'</span><div class="inline-tools"><button class="btn small" title="Alterar foto / editar vendedor" onclick="openSeller('+i+')">✎</button><button class="btn small" title="Excluir vendedor" onclick="deleteSeller('+i+')">🗑</button></div>';
+   teamList.appendChild(d)
+ })
+}
 function openClient(){document.getElementById('clientModal').style.display='flex';cDate.value=new Date().toISOString().slice(0,10)}
 function saveClient(e){e.preventDefault();let n=cName.value.trim(),p=cPlan.value,d=cDate.value.split('-').reverse().join('/'),city=cCity.value.trim(),b=cNeighborhood.value.trim(),cep=cCep.value.trim();let tr=document.createElement('tr');tr.innerHTML='<td>'+n+'</td><td>'+p+'</td><td>'+d+'</td><td>'+city+' • '+b+'</td><td>'+cep+'</td><td><span class="pill amber">Pós-venda</span></td>';document.querySelector('#salesTable tbody').prepend(tr);document.getElementById('clientModal').style.display='none';e.target.reset();toast('Cliente cadastrado e incluído na lista')}
 function filterTable(){let q=document.getElementById('tableSearch').value.toLowerCase();document.querySelectorAll('#salesTable tbody tr').forEach(r=>r.style.display=r.innerText.toLowerCase().includes(q)?'':'none')}
